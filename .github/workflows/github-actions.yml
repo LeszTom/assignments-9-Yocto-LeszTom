@@ -13,10 +13,12 @@ jobs:
             with:
               clean: false
               submodules: 'recursive'
-          - uses: webfactory/ssh-agent@v0.5.4
+          - uses: webfactory/ssh-agent@v0.7.0
             with:
                  ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           - name: Run build
+            env:
+              GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
             timeout-minutes: 600
             run: |
                docker run --rm \
