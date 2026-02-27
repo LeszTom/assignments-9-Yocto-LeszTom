@@ -11,6 +11,7 @@ FILES:${PN} += "${bindir}/aesdsocket"
 TARGET_LDFLAGS += "-lpthread -lrt"
 RDEPENDS:${PN} += "bash"
 
+
 INITSCRIPT_PACKAGES="${PN}"
 INITSCRIPT_NAME:${PN}="aesdsocket-start-stop"
 INITSCRIPT_PARAMS = "start 99 S 2 3 4 5 ."
