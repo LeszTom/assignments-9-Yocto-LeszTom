@@ -22,7 +22,6 @@ else
 	echo "${CONFLINE} already exists in the local.conf file"
 fi
 
-
 bitbake-layers show-layers | grep "meta-aesd" > /dev/null
 layer_info=$?
 
@@ -31,6 +30,16 @@ if [ $layer_info -ne 0 ];then
 	bitbake-layers add-layer ../meta-aesd
 else
 	echo "meta-aesd layer already exists"
+fi
+
+bitbake-layers show-layers | grep "meta-oe" > /dev/null
+nano_info=$?
+
+if [ $nano_info -ne 0 ];then
+	echo "Adding meta-oe layer"
+	bitbake-layers add-layer ../meta-openembedded/meta-oe
+else
+	echo "meta-oe layer already exists"
 fi
 
 set -e
