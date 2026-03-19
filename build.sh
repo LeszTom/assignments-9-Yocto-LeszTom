@@ -32,15 +32,15 @@ else
 	echo "meta-aesd layer already exists"
 fi
 
-bitbake-layers show-layers | grep "meta-oe" > /dev/null
-nano_info=$?
+#bitbake-layers show-layers | grep "meta-oe" > /dev/null
+#nano_info=$?
 
-if [ $nano_info -ne 0 ];then
-	echo "Adding meta-oe layer"
-	bitbake-layers add-layer ../openembedded/meta-openembedded/meta-oe
-else
-	echo "meta-oe layer already exists"
-fi
+#if [ $nano_info -ne 0 ];then
+#	echo "Adding meta-oe layer"
+#	bitbake-layers add-layer ../openembedded/meta-openembedded/meta-oe
+#else
+#	echo "meta-oe layer already exists"
+#fi
 
 set -e
 bitbake core-image-aesd

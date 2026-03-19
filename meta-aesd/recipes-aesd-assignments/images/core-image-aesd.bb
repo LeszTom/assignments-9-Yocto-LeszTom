@@ -2,7 +2,7 @@ inherit core-image
 CORE_IMAGE_EXTRA_INSTALL += "aesd-assignments"
 CORE_IMAGE_EXTRA_INSTALL += "openssh"
 CORE_IMAGE_EXTRA_INSTALL += "bash"
-CORE_IMAGE_EXTRA_INSTALL += "nano"
+#CORE_IMAGE_EXTRA_INSTALL += "nano"
 #CORE_IMAGE_EXTRA_INSTALL += "scull"
 #CORE_IMAGE_EXTRA_INSTALL += "misc-modules"
 IMAGE_INSTALL:append = " scull"
