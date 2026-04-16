@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 SRC_URI = "git://git@github.com/cu-ecen-aeld/assignments-3-and-later-LeszTom.git;protocol=ssh;branch=main"
 PV = "1.0+git${SRCPV}"
-SRCREV = "0562336eeaa3b0dc9d69df0c5be471d3cfd232d9"
+SRCREV = "e099aaf3a05a2d624f07ac39b0f538c7320acf72"
 S = "${WORKDIR}/git/server"
 
 FILES:${PN} += "${bindir}/aesdsocket"

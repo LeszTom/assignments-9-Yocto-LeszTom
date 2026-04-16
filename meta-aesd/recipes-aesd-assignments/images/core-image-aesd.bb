@@ -7,6 +7,7 @@ CORE_IMAGE_EXTRA_INSTALL += "bash"
 #CORE_IMAGE_EXTRA_INSTALL += "misc-modules"
 IMAGE_INSTALL:append = " scull"
 IMAGE_INSTALL:append = " misc-modules"
+IMAGE_INSTALL:append = " aesd-char-device"
 
 inherit extrausers
 # See https://docs.yoctoproject.org/singleindex.html#extrausers-bbclass
