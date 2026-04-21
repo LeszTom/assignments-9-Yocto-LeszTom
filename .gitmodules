@@ -1,0 +1,11 @@
+[submodule "assignment-autotest"]
+	path = assignment-autotest
+	url = https://github.com/cu-ecen-aeld/assignment-autotest.git
+[submodule "poky"]
+	path = poky
+	url = https://git.yoctoproject.org/poky
+	branch = scarthgap
+[submodule "openembedded"]
+	path = openembedded
+	url = https://git.openembedded.org/meta-openembedded
+	branch = scarthgap

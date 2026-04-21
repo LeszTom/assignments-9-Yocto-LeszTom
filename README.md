@@ -1,1 +1,2 @@
-# assignments-9-Yocto-LeszTom
+# yocto-assignments-base
+Base repository for AESD Yocto assignments

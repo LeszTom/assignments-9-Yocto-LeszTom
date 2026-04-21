@@ -1,0 +1,22 @@
+#! /bin/sh
+
+case "$1" in
+start)
+echo "Update module table"
+depmod -a
+echo "Starting init script for Module Loading"
+start-stop-daemon -S -n init -a /home/root/scull_load
+start-stop-daemon -S -n init -a /home/root/module_load hello
+start-stop-daemon -S -n init -a /home/root/module_load faulty
+;;
+stop)
+echo "Removing user modules"
+start-stop-daemon -S -n init -a /home/root/scull_unload
+start-stop-daemon -S -n init -a /home/root/module_unload hello
+start-stop-daemon -S -n init -a /home/root/module_unload faulty
+;;
+*)
+echo "Usage: $0 {start|stop}"
+exit 1
+esac
+exit 0
